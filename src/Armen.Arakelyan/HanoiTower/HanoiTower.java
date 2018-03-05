@@ -19,6 +19,8 @@ public class HanoiTower {
         System.out.println(c.toString());
     }
 
+    //TODO: variable names should contain more information, just type anme is not enough
+    //TODO: stack will be better
     private static void hanoi(String string, List<String> home, List<String> helper, List<String> destination) {
         int indexOfString = home.indexOf(string);
         if (indexOfString == home.size() - 1) {
@@ -34,5 +36,8 @@ public class HanoiTower {
     private static void move(String string, List<String> from, List<String> to) {
         to.add(string);
         from.remove(string);
+
+//        to.add(from.pop());//TODO
+
     }
 }

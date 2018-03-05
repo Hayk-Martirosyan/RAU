@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameTable {
-
+    //TODO:great! its good practise to not use exact implementation names in variable definitions
     private List<Card> openCards;
     private List<Card> allCards;
 

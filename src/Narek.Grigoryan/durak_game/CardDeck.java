@@ -13,7 +13,7 @@ public class CardDeck {
 
         for (Suit suit : Suit.values()) {
             for (int rankInt = 1; rankInt <= Rank.getMaxRank(); ++rankInt) {
-                cardStack.push(new Card(suit, new Rank(rankInt)));
+                cardStack.push(new Card(suit, new Rank(rankInt)));//TODO: can use factory method
             }
         }
 

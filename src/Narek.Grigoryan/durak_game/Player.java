@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Player {
 
-    public List<Card> handCards;
+    public List<Card> handCards;//TODO:why public
     private boolean pickedUp;
 
     public void give(Card card) {

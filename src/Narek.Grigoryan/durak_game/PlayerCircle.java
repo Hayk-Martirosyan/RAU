@@ -14,7 +14,7 @@ public class PlayerCircle {
         if (!isEmpty()) {
             return this.head.player;
         }
-        throw new NullPointerException();
+        throw new NullPointerException();//TODO: don't throw NullPointerException, for this case IllegalStateException is better
     }
 
     public Player last() {
