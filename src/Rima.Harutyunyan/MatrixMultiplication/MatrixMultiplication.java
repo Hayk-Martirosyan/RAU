@@ -1,4 +1,4 @@
-package Day2;
+package MatrixMultiplication;
 
 import java.util.Scanner;
 

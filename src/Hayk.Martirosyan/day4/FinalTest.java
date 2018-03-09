@@ -1,9 +1,9 @@
 package day4;
 
 public class FinalTest {
-//    private final String name;
+    private final String name;
 
-//    private static final double PI;
+    private static final double PI;
 
     FinalTest(){
 //        name="";
@@ -20,18 +20,19 @@ public class FinalTest {
 
 
     {
-//        this.name = "";
+        this.name = "";
 //        this.PI = Math.PI;
     }
 
     {
 //        this.name = "test";
-//        this.PI = 0;
+//        FinalTest.PI = 0;
     }
 
     static{
 //        this.name = "";
 //        PI = Math.PI;
+        PI = 0;
     }
 
 }

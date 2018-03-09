@@ -10,7 +10,7 @@ public class Desk {
     private final DeskPoint FINISH = new DeskPoint(9, 9);
     private boolean crossedFinishLine;
 
-    public static int step = 0;
+    public static int step = 0;//TODO public fields
 
     Desk() {
         this.crossedFinishLine = false;
@@ -89,7 +89,7 @@ public class Desk {
     }
 
     public void drawDesk() {
-        for (int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i) {//TODO; magic numbers
             System.out.println(desk.get(i).toString());
         }
     }

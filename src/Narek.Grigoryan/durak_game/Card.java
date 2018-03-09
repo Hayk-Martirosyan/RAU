@@ -27,11 +27,11 @@ public class Card {
 
     @Override
     public String toString() {
-        return suit.name() + rank.toString();// TODO: don't use to string, its for debugging
+        return suit.name() + rank.toString();
     }
 
     public boolean equals (final Card that) {
-        return this.suit.equals(that.suit)//TODO:if suit and rank cant be null then check it in constructor othervise here
+        return this.suit.equals(that.suit)//TODO:if suit and rank cant be null then check it in constructor otherwise here
                 && this.rank.equals(that.rank);
     }
 

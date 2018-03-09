@@ -9,9 +9,12 @@ public class Constructors {
 
     }
 
-    public Constructors(String name){
+    public Constructors(String name, int age){
+
+
         this();
         this.name = name;
+        age = 20;
     }
 
     @Override
@@ -20,12 +23,10 @@ public class Constructors {
     }
 
     public static void main(String[] args) {
-        Constructors c1 = new Constructors();
-        System.out.println(c1.toString());
-
-        Constructors c2 = new Constructors("c2");
-        System.out.println(c2.toString());
-
+        System.out.println();
     }
 
+    protected void finalize() {
+
+    }
 }

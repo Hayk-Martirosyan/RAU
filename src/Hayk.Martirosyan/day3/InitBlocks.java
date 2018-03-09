@@ -23,7 +23,7 @@ public class InitBlocks {
     }
 
 
-//    static {
-//        System.out.println("?");
-//    }
+    static {
+        System.out.println("?");
+    }
 }

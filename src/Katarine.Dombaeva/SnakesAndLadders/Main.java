@@ -9,10 +9,12 @@ public class Main {
         Player p3 = new Player("newPlayer");
 
         while (!desk.getCrossedFinishLine()) {
+            //TODO start
             dice.rollTheDice();
-            System.out.print("p1 --> ");System.out.println(dice.getDiceFace());
+            System.out.print("p1 --> ");System.out.println(dice.getDiceFace());//TODO one statement per line
             p1.step(dice.getDiceFace(), desk);
             desk.drawDesk();
+            //TODO end code duplication bellow
             if (!desk.getCrossedFinishLine()) {
                 dice.rollTheDice();
                 System.out.print("p2 --> ");System.out.println(dice.getDiceFace());

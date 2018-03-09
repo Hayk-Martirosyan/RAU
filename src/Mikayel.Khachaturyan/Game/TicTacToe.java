@@ -1,13 +1,10 @@
+package Game;
 /*
 
 Tic-Tac-Toe Game
 
 
  */
-
-
-
-package com.company;
 
 
 import java.io.File;
@@ -81,6 +78,7 @@ class Board {
     }
 }
 class ScoreKeeper{
+    //TODO
     private String PlayerName1;
     private String PlayerName2;
 
