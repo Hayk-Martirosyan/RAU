@@ -1,5 +1,9 @@
 package durak_game;
 
+import durak_game.card.CardDeck;
+import durak_game.game_logic.PlayerCircle;
+import durak_game.player.Player;
+
 public class Game {
 
     private CardDeck cardDeck;

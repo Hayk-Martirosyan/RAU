@@ -1,10 +1,12 @@
-package durak_game;
+package durak_game.player;
+
+import durak_game.card.Card;
 
 import java.util.List;
 
 public class Player {
 
-    public List<Card> handCards;//TODO:why public
+    private List<Card> handCards;
     private boolean pickedUp;
 
     public void give(Card card) {

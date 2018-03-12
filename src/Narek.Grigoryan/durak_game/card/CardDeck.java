@@ -1,6 +1,11 @@
-package durak_game;
+package durak_game.card;
 
-import java.util.*;
+import durak_game.card.Card;
+import durak_game.card.Rank;
+import durak_game.card.Suit;
+
+import java.util.Collections;
+import java.util.Stack;
 
 public class CardDeck {
 
@@ -12,8 +17,8 @@ public class CardDeck {
         cardStack = new Stack<>();
 
         for (Suit suit : Suit.values()) {
-            for (int rankInt = 1; rankInt <= Rank.getMaxRank(); ++rankInt) {
-                cardStack.push(new Card(suit, new Rank(rankInt)));//TODO: can use factory method
+            for (int rankInt = Rank.getMinRank(); rankInt <= Rank.getMaxRank(); ++rankInt) {
+                cardStack.push(new Card(suit, Rank.makeWithInt(rankInt)));
             }
         }
 
@@ -31,7 +36,7 @@ public class CardDeck {
         return deckSize;
     }
 
-    Card topCard() {
+    public Card topCard() {
         return cardStack.pop();
     }
 }

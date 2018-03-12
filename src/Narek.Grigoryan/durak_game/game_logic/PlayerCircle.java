@@ -1,4 +1,6 @@
-package durak_game;
+package durak_game.game_logic;
+
+import durak_game.player.Player;
 
 public class PlayerCircle {
 
@@ -6,22 +8,24 @@ public class PlayerCircle {
     private PlayerNode tail;
     private PlayerNode head;
 
-    public void add (Player attacker) {
+    public void add (final Player attacker) {
         //TODO
     }
 
     public Player first() {
-        if (!isEmpty()) {
+        if (this.isEmpty()) {
+            throw new IllegalStateException("The circle is empty!");
+        } else {
             return this.head.player;
         }
-        throw new NullPointerException();//TODO: don't throw NullPointerException, for this case IllegalStateException is better
     }
 
     public Player last() {
-        if (!isEmpty()) {
-            return tail.player;
+        if (this.isEmpty()) {
+            throw new IllegalStateException("The circle is empty!");
+        } else {
+            return this.tail.player;
         }
-        throw new NullPointerException();
     }
 
     private boolean isEmpty() {

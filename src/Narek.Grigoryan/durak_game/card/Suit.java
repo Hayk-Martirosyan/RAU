@@ -1,4 +1,4 @@
-package durak_game;
+package durak_game.card;
 
 public enum Suit {
     H,

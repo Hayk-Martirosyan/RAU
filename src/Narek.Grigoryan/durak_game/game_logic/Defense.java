@@ -1,4 +1,7 @@
-package durak_game;
+package durak_game.game_logic;
+
+import durak_game.card.Card;
+import durak_game.player.Player;
 
 public class Defense {
 
