@@ -1,5 +1,7 @@
 package durak_game.card;
 
+import java.util.Objects;
+
 public class Card {
 
     private Suit suit;
@@ -41,4 +43,22 @@ public class Card {
                 && this.rank.equals(that.rank);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (this.getClass().equals(o.getClass())) {
+            Card that = (Card) o;
+            return this.suit.equals(that.suit)
+                    && this.rank.equals(that.rank);
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.suit, this.rank);
+    }
 }

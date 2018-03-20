@@ -47,10 +47,7 @@ public class Rank {
         return this.rankInt - that.getRankInt();
     }
 
-    public boolean equals(final Rank that) {
-        return this == that;
-    }
-
+    @Override
     public String toString() {
         String result = "";
         if (rankInt < RANK_OFFSET) {
