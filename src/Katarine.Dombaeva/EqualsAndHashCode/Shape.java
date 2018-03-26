@@ -1,5 +1,7 @@
 package EqualsAndHashCode;
 
+import java.util.Objects;
+
 public abstract class Shape {
     private String name;
 
@@ -29,22 +31,6 @@ public abstract class Shape {
 
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Shape shape = (Shape) o;
-        return name.equals(shape.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return 31 * name.hashCode();
-    }
 }
 
 abstract class Shape2D extends Shape {
@@ -55,15 +41,6 @@ abstract class Shape2D extends Shape {
 
     public abstract double perimeter();
 
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
 }
 
 
@@ -73,15 +50,6 @@ abstract class Shape3D extends Shape {
     }
     public abstract double volume();
 
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
 }
 
 class Rectangle extends Shape2D {
@@ -105,15 +73,24 @@ class Rectangle extends Shape2D {
 
     @Override
     public boolean equals(Object o) {
-        if(!super.equals(o)){
+        if(o == this) {
+            return true;
+        }
+        if(!(o instanceof Rectangle)) {
             return false;
         }
-        return true;
+        Rectangle r = (Rectangle)o;
+        return this.height == r.height &&
+                this.width == r.width &&
+                Objects.equals(this.getName() , r.getName());
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        int result = this.getName().hashCode();
+        result = 31 * result + Double.hashCode(this.width);
+        result = 31 * result + Double.hashCode(this.height);
+        return result;
     }
 }
 
@@ -135,6 +112,26 @@ final class Sphere extends Shape3D {
     @Override
     public double volume() {
         return 4/3*Math.PI * Math.pow(radius, 3);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        if(!(o instanceof Sphere)) {
+            return false;
+        }
+        Sphere s = (Sphere)o;
+        return this.radius == s.radius &&
+                Objects.equals(this.getName() , s.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = this.getName().hashCode();
+        result = 31 * result + Double.hashCode(this.radius);
+        return result;
     }
 }
 
